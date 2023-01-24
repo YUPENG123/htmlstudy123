@@ -1,0 +1,200 @@
+<div class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="EVzeRP" data-user="erikterwan"  data-prefill='{"title":"Pure CSS Hamburger fold-out menu","description":"I came up with this idea to use the :checked selector to activate a hamburger menu. This is it, no js to toggle a class.","tags":["css3","hamburger","menu","nojs"],"scripts":[],"stylesheets":[]}'>
+  <pre data-lang="html">&lt;!--    Made by Erik Terwan    -->
+&lt;!--   24th of November 2015   -->
+&lt;!--        MIT License        -->
+&lt;nav role="navigation">
+  &lt;div id="menuToggle">
+    &lt;!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    &lt;input type="checkbox" />
+    
+    &lt;!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    &lt;span>&lt;/span>
+    &lt;span>&lt;/span>
+    &lt;span>&lt;/span>
+    
+    &lt;!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    &lt;ul id="menu">
+      &lt;a href="#">&lt;li>Home&lt;/li>&lt;/a>
+      &lt;a href="#">&lt;li>About&lt;/li>&lt;/a>
+      &lt;a href="#">&lt;li>Info&lt;/li>&lt;/a>
+      &lt;a href="#">&lt;li>Contact&lt;/li>&lt;/a>
+      &lt;a href="https://erikterwan.com/" target="_blank">&lt;li>Show me more&lt;/li>&lt;/a>
+    &lt;/ul>
+  &lt;/div>
+&lt;/nav></pre>
+  <pre data-lang="css" data-option-autoprefixer="true">/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  /* make it look decent enough */
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}</pre>
+  <pre data-lang="js">// Nothing to see here guy's and gal's, only html + css.</pre></div>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
