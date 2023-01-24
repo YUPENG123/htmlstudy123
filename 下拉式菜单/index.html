@@ -1,18 +1,156 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="ALbdbJ" data-user="andornagy"  data-prefill='{"title":"Pure CSS DropDown Menu","description":"A simple example of a dowpdown menu made with only CSS3 and HTML","tags":["css","dropdown","menu","navigation"],"scripts":[],"stylesheets":[]}'>
+  <pre data-lang="html">
+&lt;div id="container">
+    &lt;nav>
+        &lt;ul>
+            &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">WordPress&lt;/a>
+            &lt;!-- First Tier Drop Down -->
+            &lt;ul>
+                &lt;li>&lt;a href="#">Themes&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">Plugins&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">Tutorials&lt;/a>&lt;/li>
+            &lt;/ul>        
+            &lt;/li>
+            &lt;li>&lt;a href="#">Web Design&lt;/a>
+            &lt;!-- First Tier Drop Down -->
+            &lt;ul>
+                &lt;li>&lt;a href="#">Resources&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">Links&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">Tutorials&lt;/a>
+            	&lt;!-- Second Tier Drop Down -->
+                &lt;ul>
+                    &lt;li>&lt;a href="#">HTML/CSS&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">jQuery&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Other&lt;/a>
+                        &lt;!-- Third Tier Drop Down -->
+                        &lt;ul>
+                            &lt;li>&lt;a href="#">Stuff&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="#">Things&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="#">Other Stuff&lt;/a>&lt;/li>
+                        &lt;/ul>
+                    &lt;/li>
+                &lt;/ul>
+                &lt;/li>
+            &lt;/ul>
+            &lt;/li>
+            &lt;li>&lt;a href="#">Graphic Design&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Inspiration&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Contact&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">About&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/nav>
+  &lt;h1>Pure CSS Drop Down Menu&lt;/h1>
+&lt;p> A simple dropdown navigation menu made with CSS Only. Dropdowns are marked with a plus sign ( + )&lt;/p>
+&lt;/div></pre>
+  <pre data-lang="css">/* CSS Document */
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-</head>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 
-<body>
+body {
+	background: #212121;
+	font-size:22px;
+	line-height: 32px;
+	color: #ffffff;
+	word-wrap:break-word !important;
+	font-family: 'Open Sans', sans-serif;
+	}
 
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #FFF;
+}	
 
-</body>
+h3 {
+	font-size: 30px;
+	text-align: center;
+	color: #FFF;
+}
 
-</html>
+h3 a {
+	color: #FFF;
+}
+
+a {
+	color: #FFF;
+}
+
+h1 {
+	margin-top: 100px;
+	text-align:center;
+	font-size:60px;
+	font-family: 'Bree Serif', 'serif';
+	}
+
+#container {
+	margin: 0 auto;
+}
+
+p {
+	text-align: center;
+}
+
+nav {
+	margin: 50px 0;
+	background-color: #E64A19;
+}
+
+nav ul {
+	padding: 0;
+  margin: 0;
+	list-style: none;
+	position: relative;
+	}
+	
+nav ul li {
+	display:inline-block;
+	background-color: #E64A19;
+	}
+
+nav a {
+	display:block;
+	padding:0 10px;	
+	color:#FFF;
+	font-size:20px;
+	line-height: 60px;
+	text-decoration:none;
+}
+
+nav a:hover { 
+	background-color: #000000; 
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 60px; /* the height of the main nav */
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px; 
+	left:170px;
+}
+
+	
+/* Change this in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }</pre></div>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
