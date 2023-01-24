@@ -4,14 +4,4 @@
 
 <https://yupeng123.github.io/htmlstudy123/>
 
-<
-a
-href
-="https://bing.xinac.net"
-target
-="_blank"
->
-https://bing.xinac.net
-</
-a
->
+<a href="https://bing.xinac.net" target="_blank">https://bing.xinac.net</a>
