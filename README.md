@@ -32,13 +32,13 @@
 
 <a href="https://yupeng123.github.io/htmlstudy123/CSS动画菜单" target="_blank">CSS动画菜单</a>
 
-<a href="https://yupeng123.github.io/htmlstudy123/响应式css标签" target="_blank">响应式css标签</a>
+<a href="https://yupeng123.github.io/htmlstudy123/CSS提示" target="_blank">CSS提示</a>
 
-<a href="https://yupeng123.github.io/htmlstudy123/响应式css标签" target="_blank">响应式css标签</a>
+<a href="https://yupeng123.github.io/htmlstudy123/CSS表格" target="_blank">CSS表格</a>
 
-<a href="https://yupeng123.github.io/htmlstudy123/响应式css标签" target="_blank">响应式css标签</a>
+<a href="https://yupeng123.github.io/htmlstudy123/CSS分段控件" target="_blank">CSS分段控件</a>
 
-<a href="https://yupeng123.github.io/htmlstudy123/响应式css标签" target="_blank">响应式css标签</a>
+<a href="https://yupeng123.github.io/htmlstudy123/纯CSS响应式选项卡" target="_blank">纯CSS响应式选项卡</a>
 
-<a href="https://yupeng123.github.io/htmlstudy123/响应式css标签" target="_blank">响应式css标签</a>
+<a href="https://yupeng123.github.io/htmlstudy123/CSS下列菜单" target="_blank">CSS下列菜单</a>
 
