@@ -44,7 +44,7 @@
 
 
 
-'''汉堡菜单：https://codepen.io/erikterwan/pen/EVzeRP
+［汉堡菜单:］(https://codepen.io/erikterwan/pen/EVzeRP)
 css弹出效果：https://codepen.io/imprakash/pen/GgNMXO
 css下拉选择：https://codepen.io/imprakash/pen/VejpQP
 下拉式菜单：https://codepen.io/andornagy/pen/xhiJH
@@ -60,4 +60,4 @@ CSS表格：https://codepen.io/alexerlandsson/pen/mPWgpO
 CSS分段控件：https://codepen.io/fstgerm/pen/Jafyj
 纯CSS响应式选项卡：https://codepen.io/Fallupko/pen/ruLdg
 CSS下列菜单：https://codepen.io/Moslim/pen/gmzvQj
-响应式CSS标签：https://codepen.io/imprakash/pen/epZvbQ'''
+响应式CSS标签：https://codepen.io/imprakash/pen/epZvbQ
