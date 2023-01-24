@@ -1,151 +1,134 @@
-/*
- * Made by Erik Terwan
- * 24th of November 2015
- * MIT License
- *
- *
- * If you are thinking of using this in
- * production code, beware of the browser
- * prefixes.
- */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
 
 body {
-  margin: 0;
-  padding: 0;
-
-  /* make it look decent enough */
-  background: #232323;
-  color: #cdcdcd;
-  font-family: "Avenir Next", "Avenir", sans-serif;
+  font-family: sans-serif;
+  background: #f6f9fa;
 }
 
-#menuToggle {
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-
-  z-index: 1;
-
-  -webkit-user-select: none;
-  user-select: none;
+h1 {
+  color: #ccc;
+  text-align: center;
 }
 
-#menuToggle a {
+a {
+  color: #ccc;
   text-decoration: none;
-  color: #232323;
-
-  transition: color 0.3s ease;
+  outline: none;
 }
 
-#menuToggle a:hover {
-  color: tomato;
-}
-
-
-#menuToggle input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-
-  cursor: pointer;
-
-  opacity: 0;
-  /* hide this */
-  z-index: 2;
-  /* and place it over the hamburger */
-
-  -webkit-touch-callout: none;
-}
-
-/*
-  * Just a quick hamburger
-  */
-#menuToggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
+/*Fun begins*/
+.tab_container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 70px;
   position: relative;
-
-  background: #cdcdcd;
-  border-radius: 3px;
-
-  z-index: 1;
-
-  transform-origin: 4px 0px;
-
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    opacity 0.55s ease;
 }
 
-#menuToggle span:first-child {
-  transform-origin: 0% 0%;
+input,
+section {
+  clear: both;
+  padding-top: 10px;
+  display: none;
 }
 
-#menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
+label {
+  font-weight: 700;
+  font-size: 18px;
+  display: block;
+  float: left;
+  width: 20%;
+  padding: 1.5em;
+  color: #757575;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  background: #f0f0f0;
 }
 
-/* 
-  * Transform all the slices of hamburger
-  * into a crossmark.
-  */
-#menuToggle input:checked~span {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+#tab1:checked~#content1,
+#tab2:checked~#content2,
+#tab3:checked~#content3,
+#tab4:checked~#content4,
+#tab5:checked~#content5 {
+  display: block;
+  padding: 20px;
+  background: #fff;
+  color: #999;
+  border-bottom: 2px solid #f0f0f0;
 }
 
-/*
-  * But let's hide the middle one.
-  */
-#menuToggle input:checked~span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
+.tab_container .tab-content p,
+.tab_container .tab-content h3 {
+  -webkit-animation: fadeInScale 0.7s ease-in-out;
+  -moz-animation: fadeInScale 0.7s ease-in-out;
+  animation: fadeInScale 0.7s ease-in-out;
 }
 
-/*
-  * Ohyeah and the last one should go the other direction
-  */
-#menuToggle input:checked~span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
+.tab_container .tab-content h3 {
+  text-align: center;
 }
 
-/*
-  * Make this absolute positioned
-  * at the top left of the screen
-  */
-#menu {
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+.tab_container [id^="tab"]:checked+label {
+  background: #fff;
+  box-shadow: inset 0 3px #0CE;
 }
 
-#menu li {
-  padding: 10px 0;
-  font-size: 22px;
+.tab_container [id^="tab"]:checked+label .fa {
+  color: #0CE;
 }
 
-/*
-  * And let's slide it in from the left
-  */
-#menuToggle input:checked~ul {
-  transform: none;
+label .fa {
+  font-size: 1.3em;
+  margin: 0 0.4em 0 0;
+}
+
+/*Media query*/
+@media only screen and (max-width: 900px) {
+  label span {
+    display: none;
+  }
+
+  .tab_container {
+    width: 98%;
+  }
+}
+
+/*Content Animation*/
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.no_wrap {
+  text-align: center;
+  color: #0ce;
+}
+
+.link {
+  text-align: center;
 }
