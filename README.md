@@ -42,3 +42,22 @@
 
 <a href="https://yupeng123.github.io/htmlstudy123/CSS下列菜单" target="_blank">CSS下列菜单</a>
 
+
+
+'''汉堡菜单：https://codepen.io/erikterwan/pen/EVzeRP
+css弹出效果：https://codepen.io/imprakash/pen/GgNMXO
+css下拉选择：https://codepen.io/imprakash/pen/VejpQP
+下拉式菜单：https://codepen.io/andornagy/pen/xhiJH
+CSS图片轮播图：https://codepen.io/AMKohn/pen/EKJHf
+侧边栏菜单：https://codepen.io/plavookac/pen/qomrMw
+悬停按钮：https://codepen.io/kathykato/pen/rZRaNe
+按钮悬停效果：https://codepen.io/sfoxy/pen/XpOoJe
+CSS开关按钮：https://codepen.io/himalayasingh/pen/EdVzNL
+CSS输入文本动画：https://codepen.io/alewinski/pen/grqgqx
+CSS动画菜单：https://codepen.io/joellesenne/pen/qtLEG
+CSS提示：https://codepen.io/cristina-silva/pen/XXOpga
+CSS表格：https://codepen.io/alexerlandsson/pen/mPWgpO
+CSS分段控件：https://codepen.io/fstgerm/pen/Jafyj
+纯CSS响应式选项卡：https://codepen.io/Fallupko/pen/ruLdg
+CSS下列菜单：https://codepen.io/Moslim/pen/gmzvQj
+响应式CSS标签：https://codepen.io/imprakash/pen/epZvbQ'''
