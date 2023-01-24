@@ -18,7 +18,7 @@
 
 <a href="https://yupeng123.github.io/htmlstudy123/响应式css标签" target="_blank">响应式css标签</a>
 
-<a href="https://yupeng123.github.io/htmlstudy123/响应式css标签" target="_blank">响应式css标签</a>
+<a href="https://yupeng123.github.io/htmlstudy123/CSS图片轮播图" target="_blank">CSS图片轮播图</a>
 
 <a href="https://yupeng123.github.io/htmlstudy123/响应式css标签" target="_blank">响应式css标签</a>
 
