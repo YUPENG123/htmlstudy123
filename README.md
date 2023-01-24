@@ -43,8 +43,7 @@
 <a href="https://yupeng123.github.io/htmlstudy123/CSS下列菜单" target="_blank">CSS下列菜单</a>
 
 
-
-［汉堡菜单:］(https://codepen.io/erikterwan/pen/EVzeRP)
+[汉堡菜单:](https://codepen.io/erikterwan/pen/EVzeRP)
 css弹出效果：https://codepen.io/imprakash/pen/GgNMXO
 css下拉选择：https://codepen.io/imprakash/pen/VejpQP
 下拉式菜单：https://codepen.io/andornagy/pen/xhiJH
