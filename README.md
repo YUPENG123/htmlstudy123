@@ -12,18 +12,18 @@
 * <a href="https://yupeng123.github.io/htmlstudy123/css下拉选择" target="_blank">css下拉选择</a>
 * <a href="https://yupeng123.github.io/htmlstudy123/下拉式菜单" target="_blank">下拉式菜单</a>
 * <a href="https://yupeng123.github.io/htmlstudy123/响应式css标签" target="_blank">响应式css标签</a>
-* <a href="https://yupeng123.github.io/htmlstudy123/CSS图片轮播图" target="_blank">CSS图片轮播图</a>
+* <a href="https://yupeng123.github.io/htmlstudy123/css图片轮播图" target="_blank">css图片轮播图</a>
 * <a href="https://yupeng123.github.io/htmlstudy123/侧边栏菜单" target="_blank">侧边栏菜单</a>
 * <a href="https://yupeng123.github.io/htmlstudy123/悬停按钮" target="_blank">悬停按钮</a>
 * <a href="https://yupeng123.github.io/htmlstudy123/按钮悬停效果" target="_blank">按钮悬停效果</a>
-* <a href="https://yupeng123.github.io/htmlstudy123/CSS开关按钮" target="_blank">CSS开关按钮</a>
-* <a href="https://yupeng123.github.io/htmlstudy123/CSS输入文本动画" target="_blank">CSS输入文本动画</a>
-* <a href="https://yupeng123.github.io/htmlstudy123/CSS动画菜单" target="_blank">CSS动画菜单</a>
-* <a href="https://yupeng123.github.io/htmlstudy123/CSS提示" target="_blank">CSS提示</a>
-* <a href="https://yupeng123.github.io/htmlstudy123/CSS表格" target="_blank">CSS表格</a>
-* <a href="https://yupeng123.github.io/htmlstudy123/CSS分段控件" target="_blank">CSS分段控件</a>
-* <a href="https://yupeng123.github.io/htmlstudy123/纯CSS响应式选项卡" target="_blank">纯CSS响应式选项卡</a>
-* <a href="https://yupeng123.github.io/htmlstudy123/CSS下列菜单" target="_blank">CSS下列菜单</a>
+* <a href="https://yupeng123.github.io/htmlstudy123/css开关按钮" target="_blank">css开关按钮</a>
+* <a href="https://yupeng123.github.io/htmlstudy123/css输入文本动画" target="_blank">css输入文本动画</a>
+* <a href="https://yupeng123.github.io/htmlstudy123/css动画菜单" target="_blank">css动画菜单</a>
+* <a href="https://yupeng123.github.io/htmlstudy123/css提示" target="_blank">css提示</a>
+* <a href="https://yupeng123.github.io/htmlstudy123/css表格" target="_blank">css表格</a>
+* <a href="https://yupeng123.github.io/htmlstudy123/css分段控件" target="_blank">css分段控件</a>
+* <a href="https://yupeng123.github.io/htmlstudy123/纯css响应式选项卡" target="_blank">纯css响应式选项卡</a>
+* <a href="https://yupeng123.github.io/htmlstudy123/css下列菜单" target="_blank">css下列菜单</a>
 
 ## 效果出处
 
