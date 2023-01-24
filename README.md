@@ -22,7 +22,7 @@
 
 <a href="https://yupeng123.github.io/htmlstudy123/侧边栏菜单" target="_blank">侧边栏菜单</a>
 
-<a href="https://yupeng123.github.io/htmlstudy123/响应式css标签" target="_blank">响应式css标签</a>
+<a href="https://yupeng123.github.io/htmlstudy123/悬停按钮" target="_blank">悬停按钮</a>
 
 <a href="https://yupeng123.github.io/htmlstudy123/响应式css标签" target="_blank">响应式css标签</a>
 
