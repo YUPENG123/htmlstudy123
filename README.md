@@ -8,5 +8,4 @@
 
 
 
-<a href="https://yupeng123.github.io/htmlstudy123/" target="_blank">汉堡菜单
-</a>
+<a href="https://yupeng123.github.io/htmlstudy123/汉堡菜单" target="_blank">汉堡菜单</a>
