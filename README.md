@@ -59,4 +59,4 @@
 [CSS分段控件：](https://codepen.io/fstgerm/pen/Jafyj)
 [纯CSS响应式选项卡：](https://codepen.io/Fallupko/pen/ruLdg)
 [CSS下列菜单：](https://codepen.io/Moslim/pen/gmzvQj)
-[响应式CSS标签：](https://codepen.io/imprakash/pen/epZvbQ) g 
+[响应式CSS标签：](https://codepen.io/imprakash/pen/epZvbQ)
