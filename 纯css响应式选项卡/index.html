@@ -1,63 +1,277 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="nYNgmb" data-user="Fallupko"  data-prefill='{"title":"Pure css responsive tabs","description":"Simple, clean and pure css responsive tabs.\n\n*Update*: I&apos;ve added some simple effects for tab body transitions - checkout the commented parts of scss code.","tags":[],"scripts":[],"stylesheets":[]}'>
+  <pre data-lang="html">&lt;div class="tabs-wrapper">
+	&lt;input type="radio" name="tab" id="tab1" class="tab-head" checked="checked" />
+	&lt;label for="tab1">One&lt;/label>
+	&lt;input type="radio" name="tab" id="tab2" class="tab-head" />
+	&lt;label for="tab2">Two&lt;/label>
+	&lt;input type="radio" name="tab" id="tab3" class="tab-head" />
+	&lt;label for="tab3">Three&lt;/label>
+	&lt;input type="radio" name="tab" id="tab4" class="tab-head" />
+	&lt;label for="tab4">Four&lt;/label>
+	&lt;div class="tab-body-wrapper">
+		&lt;div id="tab-body-1" class="tab-body">
+			&lt;h1>Tab 1 heading&lt;/h1>
+			&lt;p>Bacon ipsum dolor sit amet pastrami dolor tri-tip, magna tongue ullamco occaecat velit shoulder sunt elit. Non cillum turkey short loin beef ribs. Anim qui shankle short ribs pancetta boudin. Occaecat mollit in laboris ham hock bresaola corned beef flank hamburger aute chicken id t-bone.&lt;/p>
+		&lt;/div>
+		&lt;div id="tab-body-2" class="tab-body">
+			&lt;h1>Tab 2 heading&lt;/h1>
+			&lt;p>Bacon ipsum dolor sit amet pastrami dolor tri-tip, magna tongue ullamco occaecat velit shoulder sunt elit. Non cillum turkey short loin beef ribs. Anim qui shankle short ribs pancetta boudin. Occaecat mollit in laboris ham hock bresaola corned beef flank hamburger aute chicken id t-bone.&lt;/p>
+		&lt;/div>
+		&lt;div id="tab-body-3" class="tab-body">
+			&lt;h1>Tab 3 heading&lt;/h1>
+			&lt;p>Bacon ipsum dolor sit amet pastrami dolor tri-tip, magna tongue ullamco occaecat velit shoulder sunt elit. Non cillum turkey short loin beef ribs. Anim qui shankle short ribs pancetta boudin. Occaecat mollit in laboris ham hock bresaola corned beef flank hamburger aute chicken id t-bone.&lt;/p>
+		&lt;/div>
+		&lt;div id="tab-body-4" class="tab-body">
+			&lt;h1>Tab 4 heading&lt;/h1>
+			&lt;p>Bacon ipsum dolor sit amet pastrami dolor tri-tip, magna tongue ullamco occaecat velit shoulder sunt elit. Non cillum turkey short loin beef ribs. Anim qui shankle short ribs pancetta boudin. Occaecat mollit in laboris ham hock bresaola corned beef flank hamburger aute chicken id t-bone.&lt;/p>
+		&lt;/div>
+	&lt;/div>
+&lt;/div></pre>
+  <pre data-lang="scss">@import "compass/css3";
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-</head>
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300);
+@import "compass/css3/transform";
 
-<body>
+@mixin font($font-size, $line-height, $font-family, $font-weight) {
+  font: #{$font-size}/#{$line-height} $font-family;
+  font-weight: $font-weight;
+}
 
-  <!--    Made by Erik Terwan    -->
-  <!--   24th of November 2015   -->
-  <!--        MIT License        -->
-  <nav role="navigation">
-    <div id="menuToggle">
-      <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
-      <input type="checkbox" />
+@mixin keyframe($animation_name) {
+  @keyframes #{$animation_name} {
+    @content;
+  }
+}
 
-      <!--
-    Some spans to act as a hamburger.
-    
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
-      <span></span>
-      <span></span>
-      <span></span>
+@mixin animation($delay, $duration, $animation) {
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: forwards;
+}
 
-      <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
-      <ul id="menu">
-        <a href="#">
-          <li>Home</li>
-        </a>
-        <a href="#">
-          <li>About</li>
-        </a>
-        <a href="#">
-          <li>Info</li>
-        </a>
-        <a href="#">
-          <li>Contact</li>
-        </a>
-        <a href="https://erikterwan.com/" target="_blank">
-          <li>Show me more</li>
-        </a>
-      </ul>
-    </div>
-  </nav>
+@mixin breakpoint($point) {
+  @if $point == big {
+    @media screen and (max-width: 1600px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media screen and (max-width: 900px) {
+      @content;
+    }
+  } @else if $point == small {
+    @media screen and (max-width: 600px) {
+      @content;
+    }
+  }
+}
 
+@include keyframe(content-opacity) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-</body>
+@include keyframe(content-rotate-y) {
+  from {
+    @include transform(rotateY(90deg));
+  }
+  to {
+    opacity: 1;
+    @include transform(rotateY(0deg));
+  }
+}
 
-</html>
+@include keyframe(content-rotate-x) {
+  from {
+    @include transform(rotateX(90deg));
+  }
+  to {
+    opacity: 1;
+    @include transform(rotateX(0deg));
+  }
+}
+
+@include keyframe(content-rotate-both) {
+  from {
+    @include transform(rotate(90deg));
+    @include transform-origin(0% 50%);
+  }
+  to {
+    opacity: 1;
+    @include transform(rotate(0deg));
+    @include transform-origin(0% 50%);
+  }
+}
+
+@include keyframe(content-pop-out) {
+  0% {
+    opacity: 1;
+    @include transform(scale(1));
+  }
+  50% {
+    opacity: 1;
+    @include transform(scale(1.1));
+  }
+  100% {
+    opacity: 1;
+    @include transform(scale(1));
+  }
+}
+
+@include keyframe(content-pop-in) {
+  from {
+    opacity: 1;
+    @include transform(scale(1.1));
+  }
+  to {
+    opacity: 1;
+    @include transform(scale(1));
+  }
+}
+
+@include keyframe(content-slide-bot) {
+  from {
+    top: 20px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@include keyframe(content-slide-top) {
+  from {
+    top: -20px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+/* used for wrapper animation after the load of the page */
+@include keyframe(show) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+$tab-head-color: #525252;
+$tab-checked-border-color: #b8b63e;
+$tab-border-color: #4d4c47;
+$tab-text-color: #dbdbd3;
+$tab-checked-text-color: #f2f2f2;
+$tab-hover-color: #667876;
+$tab-body-wrapper-color: #f7eec6;
+$tab-delimiter-line-height: 5px;
+$tab-label-height: 3em;
+
+html {
+  background: url(http://distinctionjewelry.com/info/wp-content/uploads/2013/01/blurred-background-10-2000x1250.jpg);
+  webkit-font-smoothing: antialiased;
+  @include font(1em, 1.5em, "Raleway", normal);
+}
+
+.tabs-wrapper {
+  margin: 5% 10% 0 10%;
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    transition: background 0.4s ease-in-out, height 0.2s linear;
+    display: inline-block;
+    cursor: pointer;
+    color: $tab-text-color;
+    width: 20%;
+    height: $tab-label-height;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: $tab-head-color;
+    text-align: center;
+    line-height: 3em;
+    &:last-of-type {
+      border-bottom: none;
+    }
+    &:hover {
+      background: $tab-hover-color;
+      /*@include transform (translate(0,-0.2em));*/
+    }
+    @include breakpoint(big) {
+      width: 15%;
+    }
+    @include breakpoint(medium) {
+      width: 20%;
+    }
+    @include breakpoint(small) {
+      width: 100%;
+      display: block;
+      border-bottom: 2px solid $tab-border-color;
+      border-radius: 0;
+    }
+  }
+  @include breakpoint(small) {
+    margin: 0;
+  }
+}
+
+#tab1,
+#tab2,
+#tab3,
+#tab4 {
+  &:checked {
+    + label {
+      background: $tab-checked-border-color;
+      color: $tab-checked-text-color;
+    }
+  }
+}
+
+.tab-body {
+  position: absolute;
+  top: -9999px;
+  // Set opacity to 1 if you won't use any animation which sets the opacity to 1
+  opacity: 0;
+  padding: 10px;
+}
+
+.tab-body-wrapper {
+  background: $tab-body-wrapper-color;
+  border-top: $tab-checked-border-color $tab-delimiter-line-height solid;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 3px;
+  @include animation(0.2s, 1.5s, show);
+  @include breakpoint(small) {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+#tab1:checked ~ .tab-body-wrapper #tab-body-1,
+#tab2:checked ~ .tab-body-wrapper #tab-body-2,
+#tab3:checked ~ .tab-body-wrapper #tab-body-3,
+#tab4:checked ~ .tab-body-wrapper #tab-body-4 {
+  position: relative;
+  top: 0px;
+  /* Choose one - modify .tab-body opacity to 1 if you don't want any animation or set opacity to 1 here */
+  // @include animation(0.2s,0.8s,content-opacity);
+  // @include animation(0.2s,0.8s,content-rotate-x);
+  /* @include animation(0.2s,0.8s,content-rotate-y); */
+  /* @include animation(0.2s,0.8s,content-rotate-both); */
+  // @include animation(0.2s,0.8s,content-pop-in);
+  @include animation(0.1s,0.4s,content-pop-out);
+  /* @include animation(0.1s,1s,content-slide-bot); */
+  // @include animation(0.1s, 1s, content-slide-top);
+}
+</pre>
+  <pre data-lang="js">/* checkout the commented parts of the scss */</pre></div>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
