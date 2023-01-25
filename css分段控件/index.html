@@ -1,63 +1,235 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="KKqwEb" data-user="fstgerm"  data-prefill='{"title":"Pure CSS Segmented Controls","tags":["pure-css","segmented-controls","tansitions","animations"],"head":"<link href=&apos;https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&apos; rel=&apos;stylesheet&apos; type=&apos;text/css&apos;>","scripts":[],"stylesheets":[]}'>
+  <pre data-lang="html">&lt;div class="container">
+  
+  &lt;div class="segmented-control" style="width: 100%; color: #5FBAAC">
+    &lt;input type="radio" name="sc-1-1" id="sc-1-1-1">
+    &lt;input type="radio" name="sc-1-1" id="sc-1-1-2">
+    &lt;input type="radio" name="sc-1-1" id="sc-1-1-3" checked>
+    &lt;input type="radio" name="sc-1-1" id="sc-1-1-4">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-</head>
+    &lt;label for="sc-1-1-1" data-value="Lorem Ipsum">Lorem Ipsum&lt;/label>
+    &lt;label for="sc-1-1-2" data-value="Risus Purus">Risus Purus&lt;/label>
+    &lt;label for="sc-1-1-3" data-value="Pellentesque Porta">Pellentesque Porta&lt;/label>
+    &lt;label for="sc-1-1-4" data-value="Fringilla">Fringilla&lt;/label>
+  &lt;/div>
 
-<body>
+  &lt;div class="segmented-control" style="width: 100%; color: #f7ae40">
+    &lt;input type="radio" name="sc-1-2" id="sc-1-2-1">
+    &lt;input type="radio" name="sc-1-2" id="sc-1-2-2" checked>
+    &lt;input type="radio" name="sc-1-2" id="sc-1-2-3">
+    &lt;input type="radio" name="sc-1-2" id="sc-1-2-4">
 
-  <!--    Made by Erik Terwan    -->
-  <!--   24th of November 2015   -->
-  <!--        MIT License        -->
-  <nav role="navigation">
-    <div id="menuToggle">
-      <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
-      <input type="checkbox" />
+    &lt;label for="sc-1-2-1" data-value="Euismod Quam">Euismod Quam&lt;/label>
+    &lt;label for="sc-1-2-2" data-value="Vehicula Ullamcorper">Vehicula Ullamcorper&lt;/label>
+    &lt;label for="sc-1-2-3" data-value="Ornare Consectetur">Ornare Consectetur&lt;/label>
+    &lt;label for="sc-1-2-4" data-value="Inceptos">Inceptos&lt;/label>
+  &lt;/div>
 
-      <!--
-    Some spans to act as a hamburger.
-    
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
-      <span></span>
-      <span></span>
-      <span></span>
+  &lt;div class="segmented-control" style="width: 100%; color: #E35354">
+    &lt;input type="radio" name="sc-1-3" id="sc-1-3-1" checked>
+    &lt;input type="radio" name="sc-1-3" id="sc-1-3-2">
+    &lt;input type="radio" name="sc-1-3" id="sc-1-3-3">
+    &lt;input type="radio" name="sc-1-3" id="sc-1-3-4">
 
-      <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
-      <ul id="menu">
-        <a href="#">
-          <li>Home</li>
-        </a>
-        <a href="#">
-          <li>About</li>
-        </a>
-        <a href="#">
-          <li>Info</li>
-        </a>
-        <a href="#">
-          <li>Contact</li>
-        </a>
-        <a href="https://erikterwan.com/" target="_blank">
-          <li>Show me more</li>
-        </a>
-      </ul>
-    </div>
-  </nav>
+    &lt;label for="sc-1-3-1" data-value="Lorem Ipsum">Lorem Ipsum&lt;/label>
+    &lt;label for="sc-1-3-2" data-value="Cras justo">Cras justo&lt;/label>
+    &lt;label for="sc-1-3-3" data-value="Tellus Etiam">Tellus Etiam&lt;/label>
+    &lt;label for="sc-1-3-4" data-value="Lorem Pellentesque">Lorem Pellentesque&lt;/label>
+  &lt;/div>
 
+  &lt;div class="segmented-control" style="width: 100%; color: #8D74C0">
+    &lt;input type="radio" name="sc-1-4" id="sc-1-4-1">
+    &lt;input type="radio" name="sc-1-4" id="sc-1-4-2">
+    &lt;input type="radio" name="sc-1-4" id="sc-1-4-3">
+    &lt;input type="radio" name="sc-1-4" id="sc-1-4-4" checked>
 
-</body>
+    &lt;label for="sc-1-4-1" data-value="Bibendum Ornare">Bibendum Ornare&lt;/label>
+    &lt;label for="sc-1-4-2" data-value="Sem">Sem&lt;/label>
+    &lt;label for="sc-1-4-3" data-value="Magna Fusce">Magna Fusce&lt;/label>
+    &lt;label for="sc-1-4-4" data-value="Etiam Dolor">Etiam Dolor&lt;/label>
+  &lt;/div>
+  
+  &lt;p>More examples&lt;/p>
+  
+  &lt;p>&lt;a href="http://code.fstgerm.com/pure-css-segmented-controls" traget="_blank">http://code.fstgerm.com/pure-css-segmented-controls&lt;/a>&lt;/p>
 
-</html>
+&lt;/div></pre>
+  <pre data-lang="scss">@import "compass/css3";
+
+$control-count: 4;
+$transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+$transition-duration: .8s;
+$color-active: white;
+
+.segmented-control {
+  position: relative; 
+  display: inline-block;
+  border: 1px solid currentColor;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  overflow: hidden;
+  margin: .8em auto;
+
+  @include border-radius(2px);
+  @include box-sizing(border-box);
+  @include user-select(none);
+  @include transition-duration($transition-duration);
+  @include transition-timing-function($transition-timing-function);
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  > input {
+    position: absolute;
+    left: -10000px;
+    opacity: 0;
+
+    &[type='checkbox'] ~ label {
+      @include transition-duration(0);
+
+      &:before {
+        opacity: 0;
+      }
+    }
+
+    @for $i from 1 through $control-count {
+      &:disabled:nth-child(#{$i}) ~ label:nth-of-type(#{$i}) {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+
+      &:nth-child(#{$i}):checked {
+        ~ label:nth-of-type(#{$i}) {
+          &:after, &:before { 
+            opacity: 1; 
+          }
+        }
+
+        @for $j from $i through $control-count {
+          ~ label:first-of-type:nth-last-of-type(#{$j}) {
+            &:after, &:before, & ~ label:after, & ~ label:before { 
+              left: percentage((($i - 1) / 10) / ($j / 10)); 
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > label {
+    display: inline-block;
+    padding: 0 .71em;
+    cursor: pointer;
+    float: left;
+    line-height: 3em;
+    font-style: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+
+    @include transition-property(none);
+    @include transition-duration(inherit);
+    @include transition-timing-function(inherit);
+
+    &:before, &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    &:after {
+      color: $color-active;
+      content: attr(data-value);
+      text-align: center;
+      padding: inherit;
+      z-index: 10;
+      font-style: inherit;
+      text-decoration: inherit;
+      font-weight: inherit;
+      opacity: 0;
+
+      @include transition-property(opacity, left);
+      @include transition-duration(inherit);
+      @include transition-timing-function(inherit);
+    }
+
+    &:after, & {
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+
+      @include box-sizing(border-box);
+    }
+
+    &:before {
+      content: '';
+      color: inherit;
+      background: currentColor;
+
+      @include transition-property(left);
+      @include transition-duration(inherit);
+      @include transition-timing-function(inherit);
+    }
+
+    @for $i from 1 through $control-count {
+      &:first-of-type:nth-last-of-type(#{$i}) {
+        &, & ~ label {
+          &, &:after, &:before {
+            width: percentage(1/$i);
+          }
+        }
+      }
+    }
+  }
+
+  &.italic, .italic             { font-style: italic; }
+  &.bold, .bold                 { font-weight: bold; }
+  &.underline, .underline       { text-decoration: underline; }
+  &.line-through, .line-through { text-decoration: line-through; }
+}
+
+$color-light : #C2C8CD;
+$color-dark  : #515457;
+
+html {
+  font-size: 14px;
+  font-family: 'Source Sans Pro', Helvetica, arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: .04em;
+  color: $color-light;
+  cursor: default;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  min-height: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  @include display-flex;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  margin: auto;
+  max-width: 700px;
+  min-width: 200px;
+  text-align: center;
+  padding: 0 6em;
+}</pre></div>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
