@@ -1,63 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="mPWgpO" data-user="alexerlandsson"  data-prefill='{"title":"Pure CSS Table Highlight (vertical &amp; horizontal)","description":"A simple (and nasty) trick to have vertical and horizontal highlight on hover on tables made with pure CSS.","tags":["css table highlight","table hover","table highlight","table","highlight"],"scripts":[],"stylesheets":[]}'>
+  <pre data-lang="html">&lt;div class="container">
+	&lt;table>
+		&lt;thead>
+			&lt;tr>
+				&lt;th>Column 1&lt;/th>
+				&lt;th>Column 2&lt;/th>
+				&lt;th>Column 3&lt;/th>
+				&lt;th>Column 4&lt;/th>
+				&lt;th>Column 5&lt;/th>
+			&lt;/tr>
+		&lt;/thead>
+		&lt;tbody>
+			&lt;tr>
+				&lt;td>Cell 1&lt;/td>
+				&lt;td>Cell 2&lt;/td>
+				&lt;td>Cell 3&lt;/td>
+				&lt;td>Cell 4&lt;/td>
+				&lt;td>Cell 5&lt;/td>
+			&lt;/tr>
+			&lt;tr>
+				&lt;td>Cell 1&lt;/td>
+				&lt;td>Cell 2&lt;/td>
+				&lt;td>Cell 3&lt;/td>
+				&lt;td>Cell 4&lt;/td>
+				&lt;td>Cell 5&lt;/td>
+			&lt;/tr>
+			&lt;tr>
+				&lt;td>Cell 1&lt;/td>
+				&lt;td>Cell 2&lt;/td>
+				&lt;td>Cell 3&lt;/td>
+				&lt;td>Cell 4&lt;/td>
+				&lt;td>Cell 5&lt;/td>
+			&lt;/tr>
+			&lt;tr>
+				&lt;td>Cell 1&lt;/td>
+				&lt;td>Cell 2&lt;/td>
+				&lt;td>Cell 3&lt;/td>
+				&lt;td>Cell 4&lt;/td>
+				&lt;td>Cell 5&lt;/td>
+			&lt;/tr>
+			&lt;tr>
+				&lt;td>Cell 1&lt;/td>
+				&lt;td>Cell 2&lt;/td>
+				&lt;td>Cell 3&lt;/td>
+				&lt;td>Cell 4&lt;/td>
+				&lt;td>Cell 5&lt;/td>
+			&lt;/tr>
+		&lt;/tbody>
+	&lt;/table>
+&lt;/div></pre>
+  <pre data-lang="less" data-option-autoprefixer="true">html,
+body {
+	height: 100%;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-</head>
+body {
+	margin: 0;
+	background: linear-gradient(45deg, #49a09d, #5f2c82);
+	font-family: sans-serif;
+	font-weight: 100;
+}
 
-<body>
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 
-  <!--    Made by Erik Terwan    -->
-  <!--   24th of November 2015   -->
-  <!--        MIT License        -->
-  <nav role="navigation">
-    <div id="menuToggle">
-      <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
-      <input type="checkbox" />
+table {
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
 
-      <!--
-    Some spans to act as a hamburger.
-    
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
-      <span></span>
-      <span></span>
-      <span></span>
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
 
-      <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
-      <ul id="menu">
-        <a href="#">
-          <li>Home</li>
-        </a>
-        <a href="#">
-          <li>About</li>
-        </a>
-        <a href="#">
-          <li>Info</li>
-        </a>
-        <a href="#">
-          <li>Contact</li>
-        </a>
-        <a href="https://erikterwan.com/" target="_blank">
-          <li>Show me more</li>
-        </a>
-      </ul>
-    </div>
-  </nav>
+th {
+	text-align: left;
+}
 
+thead {
+	th {
+		background-color: #55608f;
+	}
+}
 
-</body>
-
-</html>
+tbody {
+	tr {
+		&:hover {
+			background-color: rgba(255,255,255,0.3);
+		}
+	}
+	td {
+		position: relative;
+		&:hover {
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -9999px;
+				bottom: -9999px;
+				background-color: rgba(255,255,255,0.2);
+				z-index: -1;
+			}
+		}
+	}
+}</pre></div>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
