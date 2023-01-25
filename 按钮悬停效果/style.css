@@ -1,13 +1,4 @@
-<div class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="XpOoJe" data-user="sfoxy"  data-prefill='{"title":"CSS button hover effect","tags":["button","hover","simple","design","material"],"scripts":[],"stylesheets":[]}'>
-  <pre data-lang="html">&lt;div class="button_container">
-	&lt;p class="description">A simple pure CSS hover effect&lt;/p>
-	&lt;button class="btn">&lt;span>Hover me!&lt;/span>&lt;/button>
-  &lt;!--&lt;p class="link">
-    Design by 
-    &lt;a href="https://dribbble.com/skytrip" target="_blank">SkyTrip&lt;/a>
-  &lt;/p>-->
-&lt;/div></pre>
-  <pre data-lang="css">@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
 body {
 	margin: 0;
@@ -85,5 +76,3 @@ body {
   color: #000;
   font-size: 25px; 
 }
-</pre></div>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
